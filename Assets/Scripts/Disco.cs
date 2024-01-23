@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Disco : MonoBehaviour
 {
-    [SerializeField] Light discoLight;
+    public Light discoLight;
 
-    // Update is called once per frame
     void Update()
     {
-        discoLight.color = Random.ColorHSV(); 
+        discoLight.color = Random.ColorHSV();
     }
 }
