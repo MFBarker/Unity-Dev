@@ -25,8 +25,8 @@ public class PhysicsCharacterController : MonoBehaviour
 	{
 		Vector3 direction = Vector3.zero;
 
-		direction.x = Input.GetAxis("Horizontal");
-		direction.z = Input.GetAxis("Vertical");
+		direction.x = Input.GetAxisRaw("Horizontal");
+		direction.z = Input.GetAxisRaw("Vertical");
 
 		Quaternion yrotation = Quaternion.AngleAxis(view.rotation.eulerAngles.y, Vector3.up);
 		force = yrotation * direction * maxForce;
@@ -35,6 +35,12 @@ public class PhysicsCharacterController : MonoBehaviour
 		if (Input.GetButtonDown("Jump") && CheckGround())
 		{
 			rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+		}
+
+		if (Input.GetKey(KeyCode.LeftShift) && CheckGround())
+		{
+			//brake
+			rb.velocity = Vector3.zero;
 		}
 	}
 

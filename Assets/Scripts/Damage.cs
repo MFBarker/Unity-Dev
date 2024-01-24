@@ -12,6 +12,7 @@ public class Damage : MonoBehaviour
 		if (oneTime && other.gameObject.TryGetComponent<IDamagable>(out IDamagable damagable))
 		{
 			damagable.TakeDamage(damage);
+			GameManager.Instance.DamageHealth(damage);
 		}
 	}
 

@@ -51,7 +51,8 @@ public class Player : MonoBehaviour, IDamagable
 		health.value -= damage;
 		if (health <= 0)
 		{
-			playerDeadEvent.RaiseEvent();
+			//playerDeadEvent.RaiseEvent();
+			GameManager.Instance.OnPlayerDead();
 		}
 	}
 
@@ -60,8 +61,9 @@ public class Player : MonoBehaviour, IDamagable
 		health.value -= damage;
 		if (health <= 0)
 		{
-			playerDeadEvent.RaiseEvent();
-		}
+            //playerDeadEvent.RaiseEvent();
+            GameManager.Instance.OnPlayerDead();
+        }
 	}
 
 	public void OnRespawn(GameObject respawn)

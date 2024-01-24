@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3582039644906828973}
   - component: {fileID: 8643745786092103245}
-  - component: {fileID: 7698881120597214909}
-  - component: {fileID: 7496895063216451540}
+  - component: {fileID: 2902390195938241783}
+  - component: {fileID: 563532341994293255}
   - component: {fileID: 3223346109172401777}
   - component: {fileID: 7780450967684673418}
   - component: {fileID: 5259019715197334961}
@@ -46,37 +46,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 1355420149068800926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d0955c8856e9d84899597b4b556474d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  angle: 180
---- !u!114 &7698881120597214909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355420149068800926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31326c46c82e80449793416151d45c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rate: 3
-  amplitude: 0.25
---- !u!114 &7496895063216451540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355420149068800926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: effbcb039c9ca554d9bc39d3cd27da12, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a2f1e657e25f2641a2efbee592d29cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickupPrefab: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
+--- !u!114 &2902390195938241783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355420149068800926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7671ae659a82ad94587d3321688816b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 0.25
+  amplitude: 1
+--- !u!114 &563532341994293255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355420149068800926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f28330380573446b603348fe56a001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angle: 360
 --- !u!33 &3223346109172401777
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
