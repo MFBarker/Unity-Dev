@@ -51,18 +51,18 @@ public class Player : MonoBehaviour, IDamagable
 		health.value -= damage;
 		if (health <= 0)
 		{
-			//playerDeadEvent.RaiseEvent();
-			GameManager.Instance.OnPlayerDead();
+			playerDeadEvent.RaiseEvent();
+			//GameManager.Instance.OnPlayerDead();
 		}
 	}
 
-	public void TakeDamage(float damage)
+	public void ApplyDamage(float damage)
 	{
 		health.value -= damage;
 		if (health <= 0)
 		{
-            //playerDeadEvent.RaiseEvent();
-            GameManager.Instance.OnPlayerDead();
+            playerDeadEvent.RaiseEvent();
+            //GameManager.Instance.OnPlayerDead();
         }
 	}
 

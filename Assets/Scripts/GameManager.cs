@@ -22,6 +22,7 @@ public class GameManager : Singleton<GameManager>
 	[Header("Events")]
 	[SerializeField] Event gameStartEvent;
 	[SerializeField] GameObjectEvent respawnEvent;
+	[SerializeField] Event playerDeadEvent;
 
     public enum State
 	{
@@ -130,7 +131,7 @@ public class GameManager : Singleton<GameManager>
 
 	public void DamageHealth(float damage)
 	{
-		health.value -= damage;
+		//health.value -= damage;
 	}
 
 	public void Respawn(GameObject p)
