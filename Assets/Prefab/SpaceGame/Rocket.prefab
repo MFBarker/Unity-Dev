@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoData: {fileID: 11400000, guid: f2266a247b64f084ebc9c50e79ebfdc9, type: 2}
+  action: {fileID: 0}
 --- !u!82 &1629778842931089206
 AudioSource:
   m_ObjectHideFlags: 0
@@ -232,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4637046966039350, guid: e221d3ddf51167c4db44235d8c68ee36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.37
+      value: 4.181
       objectReference: {fileID: 0}
     - target: {fileID: 4637046966039350, guid: e221d3ddf51167c4db44235d8c68ee36, type: 3}
       propertyPath: m_LocalRotation.w

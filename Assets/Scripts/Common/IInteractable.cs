@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    void OnEnter();
-    void OnExit();
+    public abstract void OnInteractStart(GameObject gameObject);
+    public abstract void OnInteractActive(GameObject gameObject);
+    public abstract void OnInteractEnd(GameObject gameObject);
 }
