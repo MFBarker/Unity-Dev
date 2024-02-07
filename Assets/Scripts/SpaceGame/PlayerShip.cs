@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShip : Interactable
+public class PlayerShip : MonoBehaviour, IDamagable
 {
-    [SerializeField] private Action action;
+    [SerializeField] private IntEvent scoreEvent;
     [SerializeField] private Inventory inventory;
+    [SerializeField] private IntVariable score;
+    [SerializeField] private FloatVariable health;
+
+    [SerializeField] protected GameObject hitPrefab;
+    [SerializeField] protected GameObject destroyPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (action != null)
-        {
-            action.onEnter += OnInteractStart;
-            action.onStay += OnInteractActive;
-        }
+        scoreEvent.Subscribe(AddPoints);
     }
 
     // Update is called once per frame
@@ -28,22 +29,33 @@ public class PlayerShip : Interactable
 
         if (Input.GetButtonDown("Fire2"))
         { 
-            
+            //add new weapon
         }
     }
 
-    public override void OnInteractActive(GameObject gameObject)
+    private void AddPoints(int points)
     {
-        
+        score.value += points;
+        Debug.Log(score.value);
     }
 
-    public override void OnInteractEnd(GameObject gameObject)
+    public void ApplyDamage(float damage)
     {
-        
-    }
-
-    public override void OnInteractStart(GameObject gameObject)
-    {
-        
+        health.value -= damage;
+        if (health <= 0)
+        {
+            if (destroyPrefab != null)
+            {
+                Instantiate(destroyPrefab, gameObject.transform.position, Quaternion.identity);
+            }
+            Destroy(gameObject);
+        }
+        else
+        {
+            if (hitPrefab != null)
+            {
+                Instantiate(hitPrefab, gameObject.transform.position, Quaternion.identity);
+            }
+        }
     }
 }

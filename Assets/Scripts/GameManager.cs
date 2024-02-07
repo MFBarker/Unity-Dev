@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
 
     [Header("Variables")]
     [SerializeField] FloatVariable health;
+	[SerializeField] FloatVariable score;
 	[SerializeField] GameObject respawn;
 	[SerializeField] GameObject player;
 
