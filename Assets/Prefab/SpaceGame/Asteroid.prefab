@@ -67,9 +67,15 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1120343239868084, guid: ea69caf230089fd45b16b373fef6d83f, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 2077359807334663556}
+      addedObject: {fileID: 4219170506871393816}
     - targetCorrespondingSourceObject: {fileID: 1120343239868084, guid: ea69caf230089fd45b16b373fef6d83f, type: 3}
       insertIndex: 2
+      addedObject: {fileID: 8436757468045336185}
+    - targetCorrespondingSourceObject: {fileID: 1120343239868084, guid: ea69caf230089fd45b16b373fef6d83f, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 2077359807334663556}
+    - targetCorrespondingSourceObject: {fileID: 1120343239868084, guid: ea69caf230089fd45b16b373fef6d83f, type: 3}
+      insertIndex: 4
       addedObject: {fileID: 6180098591700170703}
   m_SourcePrefab: {fileID: 100100000, guid: ea69caf230089fd45b16b373fef6d83f, type: 3}
 --- !u!1 &6534203043494661511 stripped
@@ -77,6 +83,34 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1120343239868084, guid: ea69caf230089fd45b16b373fef6d83f, type: 3}
   m_PrefabInstance: {fileID: 6534122718937232179}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4219170506871393816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534203043494661511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0977968715adfd543b7ed1d53d38e895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: 
+--- !u!114 &8436757468045336185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534203043494661511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8648625b089deb147990b1dfae1bc09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 4219170506871393816}
+  damage: 30
+  damageOverTime: 0
 --- !u!114 &2077359807334663556
 MonoBehaviour:
   m_ObjectHideFlags: 0

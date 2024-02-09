@@ -2,16 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KinematicController : MonoBehaviour, IDamagable
+public class KinematicController : MonoBehaviour
 {
     [SerializeField, Range(0,40)] float speed = 1f;
     [SerializeField] float maxDistance = 5;
-    public float health = 100;
-
-    public void ApplyDamage(float damage)
-    {
-        health -= damage;
-    }
+    [SerializeField,Range(1,180)] float rotateAngle = 20;
+    [SerializeField,Range(1,40)] float rotateSpeed = 5;
 
 
     // Update is called once per frame
@@ -26,5 +22,10 @@ public class KinematicController : MonoBehaviour, IDamagable
         transform.localPosition += force;
 
         transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, maxDistance);
+        Quaternion qYaw = Quaternion.AngleAxis(direction.x * rotateAngle, Vector3.up);
+        Quaternion qPitch = Quaternion.AngleAxis(-direction.y * rotateAngle, Vector3.right);
+        
+        Quaternion rotation = qYaw * qPitch;
+        transform.localRotation = Quaternion.Lerp(transform.rotation, rotation, rotateSpeed * Time.deltaTime);
     }
 }
